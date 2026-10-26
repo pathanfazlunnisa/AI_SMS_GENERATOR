@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Content Generator</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<main class="app">
+  <header class="topbar">
+    <div class="sparkle">✦</div><div><h1>AI Content Generator</h1><p>Tune the brief on the left, compare variants on the right</p></div>
+    <button class="close" id="reset" aria-label="Reset">×</button>
+  </header>
+  <div class="workspace">
+    <aside class="controls">
+      <section><label class="section-label">CAMPAIGN TYPE</label><div class="pills" id="campaign">
+        <button class="pill selected">Promotional</button><button class="pill">Reminder</button><button class="pill">Offer</button><button class="pill">Announcement</button><button class="pill">Event</button><button class="pill">Re-engagement</button><button class="pill">Other</button>
+      </div></section>
+      <section><label class="section-label">TONE</label><div class="pills" id="tone"><button class="pill selected">Friendly</button><button class="pill">Professional</button><button class="pill">Energetic</button></div></section>
+      <section><label class="section-label">LENGTH &amp; STYLE</label>
+        <label class="toggle-row"><input type="checkbox" id="limit" checked><span class="switch"></span><span>Limit to 9 segments</span></label>
+        <label class="toggle-row"><input type="checkbox" id="emoji" checked><span class="switch"></span><span>Include emoji</span></label>
+      </section>
+      <section class="prompt-section"><label class="section-label" for="prompt">PROMPT</label>
+        <textarea id="prompt" placeholder="Describe the content you want...">Announce our new summer collection with a special launch discount</textarea>
+        <button class="generate" id="generate"><span>✦</span> Generate 3 variants</button>
+        <p class="error" id="error" role="alert"></p>
+      </section>
+    </aside>
+    <section class="results" id="results" aria-live="polite">
+      <div class="empty"><div class="big-sparkle">✦</div><p>Set your options and prompt, then<br> generate 3 variants to compare side<br> by side.</p></div>
+    </section>
+  </div>
+</main>
+<script src="/app.js"></script>
+</body></html>
